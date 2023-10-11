@@ -1,2 +1,1 @@
-export const API_USER_URL =
-	"https://mern-expense-tracker-blush.vercel.app/accounts";
+export const API_USER_URL = "https://jade-pie-670acb.netlify.app/accounts";
