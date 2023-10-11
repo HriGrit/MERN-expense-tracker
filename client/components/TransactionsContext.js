@@ -58,7 +58,7 @@ export const TransactionContextProvider = ({ children }) => {
       };
       //request
       const res = await axios.post(
-        `http://localhost:3000/api/v1/transactions`,
+        `https://mern-expense-tracker-five.vercel.app/transactions`,
         accountData,
         config
       );
