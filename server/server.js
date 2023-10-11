@@ -10,14 +10,14 @@ const app = express();
 app.use(express.json());
 app.use(
 	cors({
-		origin: "https://jade-pie-670acb.netlify.app",
+		origin: 'https://mern-expense-tracker-jgr6.vercel.app';,
 		optionsSuccessStatus: 200,
 	})
 );
 app.use((req, res, next) => {
 	res.setHeader(
 		"Access-Control-Allow-Origin",
-		"https://jade-pie-670acb.netlify.app",
+		'https://mern-expense-tracker-jgr6.vercel.app';,
 		"http://localhost:3000/"
 	);
 	res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
