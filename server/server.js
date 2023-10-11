@@ -10,14 +10,14 @@ const app = express();
 app.use(express.json());
 app.use(
 	cors({
-		origin: 'https://mern-expense-tracker-jgr6.vercel.app';,
+		origin: "https://mern-expense-tracker-gnco43kqs-hrigrits-projects.vercel.app";,
 		optionsSuccessStatus: 200,
 	})
 );
 app.use((req, res, next) => {
 	res.setHeader(
 		"Access-Control-Allow-Origin",
-		'https://mern-expense-tracker-jgr6.vercel.app';,
+		'https://mern-expense-tracker-gnco43kqs-hrigrits-projects.vercel.app';,
 		"http://localhost:3000/"
 	);
 	res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
