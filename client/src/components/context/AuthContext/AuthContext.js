@@ -92,7 +92,7 @@ export const AuthContextProvider = ({ children }) => {
 		};
 		try {
 			const res = await axios.post(
-				"http://localhost:1313/api/v1/users/login",
+				"https://mern-expense-tracker-blush.vercel.app/api/v1/users/login",
 				formData,
 				config
 			);
@@ -122,7 +122,7 @@ export const AuthContextProvider = ({ children }) => {
 		};
 		try {
 			const res = await axios.get(
-				"http://localhost:1313/api/v1/users/profile",
+				"https://mern-expense-tracker-blush.vercel.app/api/v1/users/profile",
 				config
 			);
 			if (res?.data?.state === "success") {
@@ -155,7 +155,7 @@ export const AuthContextProvider = ({ children }) => {
 		};
 		try {
 			const res = await axios.post(
-				"http://localhost:1313/api/v1/users/register",
+				"https://mern-expense-tracker-blush.vercel.app/api/v1/users/register",
 				formData,
 				config
 			);
