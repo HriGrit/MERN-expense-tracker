@@ -12,7 +12,7 @@ import {
 const isDevelopment = process.env.NODE_ENV === "development";
 const apiEndpoint = isDevelopment
 	? "http://localhost:1313/api/v1/users" // Use your local server in development
-	: "https://jade-pie-670acb.netlify.app/api/v1/users"; // Use your remote API in production
+	: "https://mern-expense-tracker-jgr6.vercel.app/api/v1/users"; // Use your remote API in production
 
 const { createContext, useReducer } = require("react");
 export const authContext = createContext();
