@@ -9,6 +9,10 @@ import {
 	REGISTER_FAILED,
 	REGISTER_SUCCESS,
 } from "./AuthActionType";
+const isDevelopment = process.env.NODE_ENV === "development";
+const apiEndpoint = isDevelopment
+	? "http://localhost:1313/api/v1/users" // Use your local server in development
+	: "https://jade-pie-670acb.netlify.app/api/v1/users"; // Use your remote API in production
 
 const { createContext, useReducer } = require("react");
 export const authContext = createContext();
@@ -92,7 +96,7 @@ export const AuthContextProvider = ({ children }) => {
 		};
 		try {
 			const res = await axios.post(
-				"https://mern-expense-tracker-jgr6.vercel.app/api/v1/users/login",
+				`${apiEndpoint}/login`,
 				formData,
 				config
 			);
@@ -121,10 +125,7 @@ export const AuthContextProvider = ({ children }) => {
 			},
 		};
 		try {
-			const res = await axios.get(
-				"https://mern-expense-tracker-jgr6.vercel.app/api/v1/users/profile",
-				config
-			);
+			const res = await axios.get(`${apiEndpoint}/profile`, config);
 			if (res?.data?.state === "success") {
 				dispatch({
 					payload: res.data,
@@ -155,7 +156,7 @@ export const AuthContextProvider = ({ children }) => {
 		};
 		try {
 			const res = await axios.post(
-				"https://mern-expense-tracker-jgr6.vercel.app/api/v1/users/register",
+				`${apiEndpoint}/register`,
 				formData,
 				config
 			);
