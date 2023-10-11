@@ -1,1 +1,1 @@
-export const API_USER_URL = "http://localhost:1313/api/v1/accounts";
+export const API_USER_URL = "https://mern-expense-tracker-five.vercel.app/accounts";
