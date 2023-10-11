@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(
 	cors({
-		origin: ["https://mern-expense-tracker.vercel.app"],
+		origin: ["https://mern-expense-tracker-five.vercel.app"],
 		methods: ["POST", "GET"],
 		credentials: true,
 	})
